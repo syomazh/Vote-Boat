@@ -18,4 +18,3 @@ python app.py
 
 3) terminal should say "Running on (local address)"(ussually mhttp://127.0.0.1:5000), open http://127.0.0.1:5000 or whatever it says in browser 
 
-c
