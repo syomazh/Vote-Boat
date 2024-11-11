@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head> 
+
+<body>
+    <video autoplay muted loop id="background-video">
+        <source src="{{ url_for('static', filename='images/boaty.mp4') }}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+
+    <div class="container mt-4">
+        <div class="text-center p-4 rounded bg-image-title">
+            <h1>VOTE BOAT</h1>
+        </div>
+    </div>
+
+    <div class="container mt-4 image-container">
+        <div class="search-bar text-center">
+            <h2 style="font-size: 1.2em;">Enter your fav politician!</h2>
+            <div class="input-group mt-3">
+                <input type="text" id="searchNameInput" class="form-control" placeholder="Candidate" style="border-color: #6A9AB0; border-width: 4px; border-radius: 3px;">
+                <input type="text" id="searchTopicInput" class="form-control" placeholder="Focus topic" style="border-color: #001F3F; border-width: 4px; border-radius: 3px;">
+                <button id="searchButton" class="btn bg-image-search-button" type="button" data-toggle="modal" data-target="#searchModal">Search</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-6 p-5 text-wrap text-center mb-3 bg-image-left-blob">
+                <h2 class="text-center mb-3">What is it?</h2>
+                <p class="text-center">If you’re feeling lost in a sea of unknowns, don’t worry—you’re not alone. Around 60% of voters don’t know their local politicians, and with a 12% rise in new voter turnout over recent elections, it's more crucial than ever to understand exactly who you’re supporting. That’s why we created this platform: a convenient, reliable resource where voters can quickly access everything they need to know about their local candidates, city commissioners, judges, and federal representatives. Join us, and cast your vote confidently!</p>
+            </div>
+            <div class="col-md-6 p-5 text-wrap text-center mb-3 bg-image-right-blob">
+                <h2 class="text-center mb-3">Our mission:</h2>
+                <p class="text-center">Blindly Balloting? Finding it tough to pull back the blinds and see the facts behind the candidates? With reliable information often hard to pin down, it’s no wonder. But what if we told you that your ballot research could be as simple as a single search on our website? Skip the struggle and hop aboard the "vote boat" for the smoothest, easiest journey toward making an informed choice!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    
+                    <div class="grid-container" style="position: relative;">
+                        <img src="{{ url_for('static', filename='images/ticket.png') }}" alt="Ticket Image">
+                        <div class="grid-overlay">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div class="d-flex align-items-center justify-content-center" style="margin: 15px;">
+                                <a href="https://www.vote.org" target="_blank">
+                                    <img src="{{ url_for('static', filename='images/anchor.png') }}" style="transform: scale(1.2); z-index: 1;">
+                                </a>
+                            
+                            </div>
+                            <div class="text-center" style="margin: 10px;">
+                                <div id="bio" style="overflow-wrap:
+                                break-word; margin: 10px;">
+                                    <strong style="font-size: 1.0em;">Bio:</strong><br>
+                                </div>
+                                <div id="voting-history" style="overflow-wrap: break-word; margin: 10px;">
+                                    <strong style="font-size: 1.0em;">Voting history:</strong><br></div>
+                            <div>
+                            </div>
+                            <div id="loading" style="display: none;">
+                                <img src="{{ url_for('static', filename='images/loadyboaty.gif') }}" alt="Loading...">
+                            </div>
+                            </div>
+                            <div></div>
+                            <div></div>
+                            <!--<div class="text-center" style="overflow-wrap: break-word;">
+                                <strong id="info" style="font-size: 1.0em;">Quick info:</strong><br></div> -->
+                            <div id="links" class="text-center" style="overflow-wrap: break-word;">
+                                <strong style="font-size: 1.0em;">Extra links:</strong><br></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            
+                            <div></div>
+            
+                        </div>
+                    </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4xF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

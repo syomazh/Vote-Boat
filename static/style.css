@@ -1,0 +1,130 @@
+.bckg {
+    background: url('') no-repeat center fixed;
+    background-size: cover;
+}
+.container, .bckg {
+    background: transparent;
+}
+
+#background-video {
+    position: fixed;
+    margin-top: 20%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    object-fit: cover;
+}
+
+/* MODAL!!!! */
+
+.modal-dialog {
+    max-width: 80%;
+    width: 80%;
+    margin: 0 auto;
+    width: 100%;
+}
+.modal-content {
+    background: none;
+    border: none;
+}
+.modal-body {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modal-header, .modal-footer {
+    display: none;
+}
+.modal-body img {
+    width: 40%;
+    height: auto;
+}
+
+
+
+
+/* images */
+
+.bg-image-title {
+    background-image: url('/static/images/red-title.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+
+    background-size: 100% 100%; /* Forces the image to stretch to fit the div */
+}
+
+.bg-image-left-blob {
+    background-image: url('/static/images/light-blob.png'); /* Correct path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+
+    background-size: 100% 100%; /* Forces the image to stretch to fit the div */
+}
+
+.bg-image-right-blob {
+    background-image: url('/static/images/dark-blob.png'); /* Correct path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    
+
+    background-size: 100% 100%; /* Forces the image to stretch to fit the div */
+}
+
+.bg-image-search-button {
+    background-image: url('/static/images/dark-title.png'); /* Correct path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+
+    background-size: 110% 110%; /* Forces the image to stretch to fit the div */
+}
+
+
+
+
+
+
+/* ticket grid stuff */
+.grid-container {
+    position: relative; 
+    display: inline-block;
+}
+
+.grid-container img {
+    display: block; /* Ensures no extra space below the image */
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.grid-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    /* Adjust the grid lines by specifying custom sizes */
+    grid-template-columns: 11% 27.5% 50.5% 11%;
+    grid-template-rows: 2% 37% 38% 21%;
+    /* pointer-events: none;  */
+    /* Allows clicks to pass through the grid */
+}
+
+/*
+.grid-overlay div {
+    border: 1px solid red;
+}
+    */
