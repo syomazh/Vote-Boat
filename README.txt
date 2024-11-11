@@ -1,8 +1,7 @@
 Hack K-State 2024 project
 
-project that scrapes the web for info on a given politcian and their voting history then outputs a neatly formatted ai summary.
-
-
+CLICK HERE TO READ ABOUT IT 
+https://devpost.com/software/vote-boat?ref_content=user-portfolio&ref_feature=in_progress
 
 STARTUP INSTRUCTION:
 
